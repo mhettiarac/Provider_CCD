@@ -1,0 +1,13 @@
+{
+  "id" : "477e1c81-2b8b-4ac5-85ce-102eee35625e",
+  "request" : {
+    "url" : "/cities",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[\"Kandy\",\"Colombo\"]",
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "477e1c81-2b8b-4ac5-85ce-102eee35625e"
+}
