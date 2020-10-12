@@ -3,6 +3,7 @@ package com.example.provider.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
@@ -19,4 +20,14 @@ public class CityController {
                     .body(Arrays.asList("Kandy", "Colombo"));
 
     }
+
+        @GetMapping("/hello")
+    public String sayHello(
+            @RequestParam (value = "name",required = false) String name){
+                String ret = null;
+              if(name!=null && !name.isEmpty())
+                ret= "Hello "+name;
+
+        return ret;
+        }
 }
