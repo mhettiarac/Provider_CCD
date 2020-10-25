@@ -1,10 +1,7 @@
 package com.example.provider.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,4 +27,14 @@ public class CityController {
 
         return ret;
         }
+
+        @GetMapping("/login")
+              public String login(
+                      @RequestParam (value = "name",required = true) String name,
+                      @RequestParam (value = "password",required = true) String password){
+
+              if(name.equals("dharaka") && password.equals("123"))
+                  return  "Hello " + name;
+               else
+                   return "invalid user";}
 }
